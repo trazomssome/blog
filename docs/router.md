@@ -1,14 +1,39 @@
-# Router 설계
+# Routering
 
-## 주의사항
+- https://expressjs.com/ko/guide/routing.html
 
-- id와 리소스 이외의 정보를 URI에 담지 말것
-- 명사, 복수형으로 구성
-- 어떤 리소스를 핸들링하는지 고민할 것
-  - POST /login(X) => POST /session
+## article (/article)
 
-## comment (/comments/)
+## user (/user)
 
-- POST : 댓글 생성
-- PATCH : 댓글 수정
-- DELETE : 댓글 삭제
+## comment (/comments)
+
+## 기능
+
+- global
+
+  - home
+  - join (get, post)
+  - login (get, post)
+
+- users
+
+  - logout (delete)
+
+- users/:id
+
+  - 회원탈퇴
+  - 회원정보조회
+  - 회원정보수정
+
+- article/:id
+
+  - 글 읽기
+
+- comments
+
+  - 생성
+
+- comments/:id
+  - patch 수정
+  - delete 삭제
